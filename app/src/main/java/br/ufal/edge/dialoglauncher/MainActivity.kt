@@ -25,14 +25,14 @@ class MainActivity : AppCompatActivity() {
             val value = value_edit_text.text.toString()
 
             if (value.isNotEmpty() && !value.equals("0")) {
-                launchDefaultAction("ingenico.intent.action.OPEN_PAYMENT_DIALOG", "", value)
+                launchDefaultAction(IngenicoIntentActions.PAYMENT.action, "", value)
             } else {
                 Toast.makeText(this, "O valor não pode ser vazio ou 0", Toast.LENGTH_SHORT).show()
             }
         }
 
         launch_transaction_dialog_button.setOnClickListener {
-            launchDefaultAction(IngenicoIntentActions.PAYMENT.action)
+            launchDefaultAction(IngenicoIntentActions.TRANSACTION.action, "", tv_transaction_text.text.toString())
         }
 
         launch_cancel_dialog_button.setOnClickListener {
@@ -42,11 +42,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         launch_seller_dialog_button.setOnClickListener {
-            launchDefaultAction(IngenicoIntentActions.SELLER.action)
+            launchDefaultAction(IngenicoIntentActions.SELLER.action, "", tv_seller_text.text.toString())
         }
 
         launch_reprint_dialog_button.setOnClickListener {
-            launchDefaultAction(IngenicoIntentActions.REPRINT.action)
+            launchDefaultAction(IngenicoIntentActions.REPRINT.action, "", tv_reprint_text.text.toString())
         }
     }
 

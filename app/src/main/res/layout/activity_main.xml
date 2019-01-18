@@ -34,6 +34,11 @@
               android:background="#ededed"
               android:layout_margin="8dp"
         />
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="numberDecimal"
+                  android:hint="Código de transação"
+                  android:id="@+id/tv_transaction_text"/>
 
         <Button android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:text="Listar transações"
@@ -71,6 +76,12 @@
               android:layout_margin="8dp"
         />
 
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="numberDecimal"
+                  android:hint="Código do lojista"
+                  android:id="@+id/tv_seller_text"/>
+
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Lojista"
@@ -85,6 +96,12 @@
               android:background="#ededed"
               android:layout_margin="8dp"
         />
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="numberDecimal"
+                  android:hint="Código reimpressão"
+                  android:id="@+id/tv_reprint_text"/>
 
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
