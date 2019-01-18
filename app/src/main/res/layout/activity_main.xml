@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="15dp"
+                  android:orientation="vertical">
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="numberDecimal"
+                  android:hint="Valor"
+                  android:id="@+id/value_edit_text"/>
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pagamento"
+                android:id="@+id/launch_button"/>
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_marginBottom="15dp" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <View android:layout_width="match_parent"
+              android:layout_height="2dp"
+              android:background="#ededed"
+              android:layout_margin="8dp"
+        />
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Listar transações"
+                android:id="@+id/launch_transaction_dialog_button"/>
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_marginBottom="15dp" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <View android:layout_width="match_parent"
+              android:layout_height="2dp"
+              android:background="#ededed"
+              android:layout_margin="8dp"
+        />
+
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:inputType="numberDecimal"
+                  android:hint="Código da transação de cancelamento"
+                  android:id="@+id/tv_cancel_transaction_code"/>
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelamento"
+                android:id="@+id/launch_cancel_dialog_button"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_marginBottom="15dp" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <View android:layout_width="match_parent"
+              android:layout_height="2dp"
+              android:background="#ededed"
+              android:layout_margin="8dp"
+        />
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lojista"
+                android:id="@+id/launch_seller_dialog_button"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_marginBottom="15dp" android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <View android:layout_width="match_parent"
+              android:layout_height="2dp"
+              android:background="#ededed"
+              android:layout_margin="8dp"
+        />
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reimpressão"
+                android:id="@+id/launch_reprint_dialog_button"/>
+    </LinearLayout>
+
+</LinearLayout>
