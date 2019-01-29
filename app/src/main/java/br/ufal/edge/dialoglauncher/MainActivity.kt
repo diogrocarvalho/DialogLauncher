@@ -25,7 +25,14 @@ class MainActivity : AppCompatActivity() {
             val value = value_edit_text.text.toString()
 
             if (value.isNotEmpty() && !value.equals("0")) {
-                launchDefaultAction(IngenicoIntentActions.PAYMENT.action, "", value)
+                val sendIntent = Intent()
+                sendIntent.type = "text/plain"
+                sendIntent.action = IngenicoIntentActions.PAYMENT.action
+                sendIntent.putExtra(Intent.EXTRA_TEXT, value_edit_text.text.toString())
+                println(radio_advanced_credit_opt.isChecked)
+                sendIntent.putExtra("ADVANCED_CREDIT_OPTIONS", radio_advanced_credit_opt.isChecked)
+                startActivity(sendIntent)
+
             } else {
                 Toast.makeText(this, "O valor não pode ser vazio ou 0", Toast.LENGTH_SHORT).show()
             }

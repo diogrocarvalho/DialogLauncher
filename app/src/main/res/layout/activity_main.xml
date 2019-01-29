@@ -18,6 +18,24 @@
                   android:hint="Valor"
                   android:id="@+id/value_edit_text"/>
 
+        <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_basic_credit_opt"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:checked="true"
+                         android:text="Opções básicas"
+            />
+            <RadioButton android:id="@+id/radio_advanced_credit_opt"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Opções avançadas"
+            />
+        </RadioGroup>
+
+
         <Button android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pagamento"
