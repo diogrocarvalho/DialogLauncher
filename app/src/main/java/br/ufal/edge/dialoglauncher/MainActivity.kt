@@ -31,7 +31,10 @@ class MainActivity : AppCompatActivity() {
                 sendIntent.putExtra(Intent.EXTRA_TEXT, value_edit_text.text.toString())
                 println(radio_advanced_credit_opt.isChecked)
                 sendIntent.putExtra("ADVANCED_CREDIT_OPTIONS", radio_advanced_credit_opt.isChecked)
-                startActivity(sendIntent)
+
+                if (sendIntent.resolveActivity(packageManager) != null) {
+                    startActivity(sendIntent)
+                }
 
             } else {
                 Toast.makeText(this, "O valor não pode ser vazio ou 0", Toast.LENGTH_SHORT).show()
